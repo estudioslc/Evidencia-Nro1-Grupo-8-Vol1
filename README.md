@@ -4,3 +4,6 @@ integrantes del grupo: Miguel López Cabada - Romina Caballero - Juan José Arat
   [TAREA](TAREA_EVIDENCIA_3.pdf)
   
   [REQUERIMIENTO](Requerimiento_Proyecto_Final_Cuatrimestral.pdf)
+  
+  [Ley 25.326](Ley_25.326.pdf)
+  
