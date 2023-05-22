@@ -1,0 +1,54 @@
+CREATE TABLE `Productos` (
+  `id_producto` int,
+  `Nombre` varchar (100),
+  `Descripción` varchar (200),
+  `Precio` decimal (10, 2),
+  `Tipo` varchar (100),
+  `Incluye promo` varchar (20)
+);
+
+CREATE TABLE `Recetas` (
+  `Id_producto` int,
+  `Id_ingredientes` int,
+  `Orden_de_incorpotación` Tipo,
+  FOREIGN KEY (`Id_producto`) REFERENCES `Productos`(`id_producto`)
+);
+
+CREATE TABLE `Lugar_de_entrega` (
+  `Dirección` int,
+  `Número_calle` int,
+  `TE_contacto` int
+);
+
+CREATE TABLE `Cliente` (
+  `id_Cliente` int,
+  `Contiene bonus` varchar (50),
+  `Lugar_de_entrega` varchar (50),
+  `Tipo_Pago` varcha (50)
+);
+
+CREATE TABLE `Pedido` (
+  `id_producto` int,
+  `id_productción` int,
+  `Fecha` Date,
+  `Cantidad` int,
+  `Cliente` int,
+  `Tipo de entrega` varchar (50),
+  FOREIGN KEY (`id_producto`) REFERENCES `Cliente`(`id_Cliente`)
+);
+
+CREATE TABLE `dav` (
+  `-id_ingrediente` int,
+  `Nombre` varchar (100),
+  `Descripción` varchar (200),
+  `Contiene alérgeno` varchar (30),
+  `Cantidad` varchar (100)
+);
+
+CREATE TABLE `Tipo_Pago` (
+  `Efectivo` int,
+  `Débito` int,
+  `Crédito` int,
+  `Gift Card` Tipo,
+  FOREIGN KEY (`Efectivo`) REFERENCES `Cliente`(`Tipo_Pago`)
+);
