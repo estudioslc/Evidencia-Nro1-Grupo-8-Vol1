@@ -10,3 +10,6 @@ integrantes del grupo: Miguel López Cabada - Romina Caballero - Juan José Arat
   [Diagrama Entidad Relación](DER_para_Big_Bread_SA_-_Diagrama_ER_de_base_de_datos_(pata_de_gallo).pdf)
   
   [Relación BdD con Python](BIG_BREAD.py)
+  
+  [Código MySQL](MySQL)
+  
