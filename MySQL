@@ -1,3 +1,6 @@
+
+CREATE DATABASE BigBread;
+USE BigBread;
 CREATE TABLE `Productos` (
   `id_producto` int,
   `Nombre` varchar (100),
