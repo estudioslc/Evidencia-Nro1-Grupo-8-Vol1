@@ -13,3 +13,8 @@ class Conectar_Base_de_Datos():
         except mysql.connector.Error as descripcionError:
             print("¡No se conectó la base de datos!',descripcionError")
             
+        finally:
+            if self.conexion.is_connected():
+                self.conexion.close()
+                print("LA CONEXION FUE CERRADA")
+            
