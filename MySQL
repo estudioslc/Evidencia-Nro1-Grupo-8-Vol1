@@ -17,17 +17,11 @@ CREATE TABLE `Recetas` (
   FOREIGN KEY (`Id_producto`) REFERENCES `Productos`(`id_producto`)
 );
 
-CREATE TABLE `Lugar_de_entrega` (
-  `Dirección` int,
-  `Número_calle` int,
-  `TE_contacto` int
-);
 
 CREATE TABLE `Cliente` (
   `id_Cliente` int,
   `Contiene bonus` varchar (50),
-  `Lugar_de_entrega` varchar (50),
-  `Tipo_Pago` varcha (50)
+  `Tipo_Pago` varchar (50)
 );
 
 CREATE TABLE `Pedido` (
