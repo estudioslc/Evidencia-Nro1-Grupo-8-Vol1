@@ -17,7 +17,6 @@ CREATE TABLE `Recetas` (
   FOREIGN KEY (`Id_producto`) REFERENCES `Productos`(`id_producto`)
 );
 
-
 CREATE TABLE `Cliente` (
   `id_Cliente` int,
   `Contiene bonus` varchar (50),
