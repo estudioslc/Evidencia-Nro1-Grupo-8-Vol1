@@ -33,7 +33,7 @@ CREATE TABLE `Pedido` (
   FOREIGN KEY (`id_producto`) REFERENCES `Cliente`(`id_Cliente`)
 );
 
-CREATE TABLE `dav` (
+CREATE TABLE `Insumos` (
   `-id_ingrediente` int,
   `Nombre` varchar (100),
   `Descripción` varchar (200),
