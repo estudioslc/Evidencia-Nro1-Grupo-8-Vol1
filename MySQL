@@ -13,7 +13,7 @@ CREATE TABLE `Productos` (
 CREATE TABLE `Recetas` (
   `Id_producto` int,
   `Id_ingredientes` int,
-  `Orden_de_incorpotación` Tipo,
+  `Orden_de_incorpotación` int,
   FOREIGN KEY (`Id_producto`) REFERENCES `Productos`(`id_producto`)
 );
 
