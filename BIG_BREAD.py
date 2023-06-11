@@ -23,7 +23,7 @@ class Conectar_Base_de_Datos():
     if self.conexion.is_connected():
         try:
             cursor = self.conexion.cursor()
-            sentenciaSQL = "INSERT INTO productos values(null,%s,%s,%s,%s,null)"
+            sentenciaSQL = "INSERT INTO productos values(%s,%s,%s,%s,%s,%s)"
             data = (producto.getid_productos(),
                     producto.getnombre(),
                     producto.getdescripcion(),
