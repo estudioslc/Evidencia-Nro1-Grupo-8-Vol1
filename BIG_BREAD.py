@@ -20,8 +20,8 @@ class Conectar_Base_de_Datos():
             
             
     def Insertar_Productos(self,producto):
-    if self.conexion.is_connected():
-        try:
+        if self.conexion.is_connected():
+         try:
             cursor = self.conexion.cursor()
             sentenciaSQL = "INSERT INTO productos values(%s,%s,%s,%s,%s,%s)"
             data = (producto.getid_productos(),
@@ -37,5 +37,19 @@ class Conectar_Base_de_Datos():
             cursor.Conexion.close()   
             print("Producto insertado correctamente")
 
+          except mysql.connector.Error as descripcionDelError:
+            print("¡Hubo un error al intentar conctar la Base de Datos", descripcionDelError)
+            
+def Listado_De_Productos(self):
+    if self.conexion.is_connected():
+        try:
+            cursor = self.conexion.cursor()
+            sentenciaSQL = "SELECT * FROM Productos"
+            cursor.execute(sentenciaSQL)
+            resultados= cursor.fetchall()
+            cursor.Conexion.close()
+            return resultados
+            
         except mysql.connector.Error as descripcionDelError:
-            print("¡Hubo un error al intentar conctar la Base de Datos", descripcionDelError)        
+            print("¡Hubo un error al intentar conctar la Base de Datos", descripcionDelError)
+            
