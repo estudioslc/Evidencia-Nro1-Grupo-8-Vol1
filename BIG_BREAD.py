@@ -1,6 +1,8 @@
 import mysql.connector
 
+from Producto import Producto
 class Conectar_Base_de_Datos():
+    
     def __init__(self) -> None:
         try:
             self.conexion = mysql.connector.connect(
@@ -10,11 +12,11 @@ class Conectar_Base_de_Datos():
                 password = '*****',
                 db = 'bd_BIG_BREAD'
             )
-        except mysql.connector.Error as descripcionError:
+            if self.conexion.is_connected():
+                print("LA CONEXION FUE EXITOSA")
+                
+        except:
             print("¡No se conectó la base de datos!',descripcionError")
             
-        finally:
-            if self.conexion.is_connected():
-                self.conexion.close()
-                print("LA CONEXION FUE CERRADA")
+            
             
