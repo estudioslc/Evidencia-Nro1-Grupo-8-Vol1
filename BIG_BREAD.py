@@ -53,3 +53,7 @@ def Listado_De_Productos(self):
         except mysql.connector.Error as descripcionDelError:
             print("¡Hubo un error al intentar conctar la Base de Datos", descripcionDelError)
             
+UPDATE Productos set Precio = 500 WHERE Id_Producto = 1;
+
+DELETE from Productos WHERE Incluye_promo LIKE 'SI%';
+select * from Productos WHERE Incluye_promo LIKE 'SI%';
