@@ -1,3 +1,4 @@
+CREATE DATABASE BIG_BREAD;
 use BigBread; 
 CREATE TABLE if not exists Recetas (ID_Receta int);
 CREATE TABLE if not exists Productos (
