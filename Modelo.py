@@ -97,3 +97,81 @@ class Productos():
         self.incluye_promo = incluye_promo
     def setiD_Receta(self,iD_Receta):
         self.iD_Receta = iD_Receta   
+
+class Pedido():
+    id_producto = 0,
+    id_producción = "",
+    Fecha = 0,
+    Cantidad = 0,
+    Cliente = 0,
+    Tipo_de_entrega = "",
+
+    def __init__(self,iD_Producto,iD_Producción,fecha,cantidad,cliente,tipo_de_entrega):
+        self.id_producto = iD_Producto
+        self.id_producción = iD_Producción
+        self.Fecha = fecha
+        self.Cantidad = cantidad
+        self.Cliente = cliente
+        self.Tipo_de_entrega = tipo_de_entrega
+    
+    def getiD_producto(self):  #OBTENER EL VALOR DE ESTE EN ESPECIFICO: ID_PRODUCTO
+        return self.iD_Producto
+    def getiD_producción(self): #OBTENER EL VALOR DEL ATRIBUTO NÚMERO DE PRODUCCIÓN
+        return self.iD_Producción
+    def getfecha(self):
+        return self.fecha
+    def getcantidad(self):
+        return self.cantidad
+    def getcliente(self):
+        return self.cliente
+    def gettipo_de_entrega(self)
+        return self.tipo_de_entrega
+        
+    def setiD_Producto(self,iD_Producto): #ASIGNO UN VALOR A ESTIBUTO. 
+        self.iD_Producto = iD_Producto
+    def setiD_Producción(self,iD_Producción):
+        self.iD_Producción = iD_Producción
+    def setfecha(self,fecha):
+        self.fecha = fecha
+    def setcantidad(self,cantidad):
+        self.cantidad = cantidad
+    def setcliente(self,cliente):
+        self.cliente = cliente
+    def settipo_de_entrega(self,tipo_de_entrega)
+        self.tipo_de_entrega = tipo_de_entrega
+
+class Insumos():
+    id_ingrediente = 0,
+    Nombre = "",
+    Descripción = 0,
+    Contiene alérgeno = 0,
+    Cantidad = 0,
+    
+    def __init__(self,iD_Ingrediente,nombre,descripción,contiene_alérgeno,cantidad):
+        self.id_ingrediente = iD_Ingrediente
+        self.Nombre = nombre
+        self.Descripción = descripción
+        self.Contiene_alérgeno = contiene_alérgeno
+        self.Cantidad = cantidad
+
+    def getiD_Ingredientes(self):
+        return self.iD_Ingredientes
+    def getnombre(self):
+        return self.nombre
+    def getdescripción(self):
+        return self.descripción
+    def getcontiene_alérgeno(self):
+        return self.contiene_alérgeno
+    def getcantidad(self):
+        return self.cantidad
+        
+    def setiD_Ingredientes(self,iD_Ingredientes): 
+        self.iD_Ingredientes = iD_Ingredientes
+    def setnombre(self,nombre):
+        self.nombre = nombre
+    def setdescripción(self,descripción):
+        self.descripción = descripción
+    def setcontiene_alérgeno(self,contiene_alérgeno):
+        self.contiene_alérgeno = contiene_alérgeno
+    def setcantidad(self,cantidad):
+        self.cantidad = cantidad
