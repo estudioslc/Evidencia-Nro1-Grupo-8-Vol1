@@ -66,30 +66,34 @@ class Productos():
         self.Precio = precio
         self.Tipo = tipo
         self.Incluye_promo = incluye_promo
-        self.ID_Receta =iD_Receta
+        self.ID_Receta = iD_Receta
     
-    def getiD_Producto(self):  #OBTENER EL VALOR DE ESTE EN ESPECIFICO: ID_PRODUCTO
+    def getiD_producto(self):  #OBTENER EL VALOR DE ESTE EN ESPECIFICO: ID_PRODUCTO
         return self.iD_Producto
-    def getnombre_Producto(self): #OBTENER EL VALOR DEL ATRIBUTO NOMBRE_PRODUCTO
-        return self.nombre_Producto
-    def getstock(self):
-        return self.stock
+    def getnombre(self): #OBTENER EL VALOR DEL ATRIBUTO NOMBRE
+        return self.nombre
+    def getdescripción(self):
+        return self.descripción
     def getprecio(self):
         return self.precio
-    def getunidad_de_medida(self):
-        return self.unidad_de_medida
+    def gettipo(self):
+        return self.tipo
+    def getincluye_promo(self)
+        return self.incluye_promo
     def getiD_Receta(self):
         return self.iD_Receta
     
-    def setiD_Producto(self,iD_Producto): #ASIGNO UN VALOR A ESTIBUTO. 
+    def setiD_producto(self,iD_Producto): #ASIGNO UN VALOR A ESTIBUTO. 
         self.iD_Producto = iD_Producto
-    def setnombre_Producto(self,nombre_Producto): #ASIGNO UN VALOR A ESTIBUTO. nombrePRoducto=Harina de arroz.
-        self.nombre_Producto = nombre_Producto
-    def setstock(self,stock):
-        self.stock = stock
+    def setnombre(self,nombre): #ASIGNO UN VALOR A ESTIBUTO. nombrePRoducto=Tarta de coco.
+        self.nombre = nombre
+    def setdescripción(self,descripción):
+        self.descripción = descripción
     def setprecio(self,precio):
         self.precio = precio
-    def setgetunidad_de_medida(self,getunidad_de_medida):
-        self.getunidad_de_medida = getunidad_de_medida
+    def settipo(self,tipo):
+        self.tipo = tipo
+    def setincluye_promo(self)
+        self.incluye_promo = incluye_promo
     def setiD_Receta(self,iD_Receta):
         self.iD_Receta = iD_Receta   
