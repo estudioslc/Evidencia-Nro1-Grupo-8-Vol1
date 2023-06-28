@@ -47,6 +47,18 @@ class Conectar():
                 self.conexion.close()
                 print("Producto insertado correctamente")
 
+    def ActualizarProductos(self):
+        if self.conexion.is_connected():
+            try:
+                select * from Productos;
+                UPDATE Productos set Precio = 500 WHERE id_producto = 1;
+
+    def EliminarProductos(self):
+        if self.conexion.is_connected():
+            try:
+                DELETE from Productos WHERE Nombre LIKE 'Harina%';
+                select * from Productos WHERE Nombre LIKE 'Harina%';
+
             except mysql.connector.Error as descripcionError:
                 print("¡No se conectó!",descripcionError)
 
