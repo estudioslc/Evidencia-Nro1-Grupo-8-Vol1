@@ -13,7 +13,7 @@ CREATE TABLE `Productos` (
 CREATE TABLE `Recetas` (
   `Id_producto` int,
   `Id_ingredientes` int,
-  `Orden_de_incorpotación` Tipo,
+  `Orden_de_incorpotación` int,
   FOREIGN KEY (`Id_producto`) REFERENCES `Productos`(`id_producto`)
 );
 
@@ -27,7 +27,7 @@ CREATE TABLE `Cliente` (
   `id_Cliente` int,
   `Contiene bonus` varchar (50),
   `Lugar_de_entrega` varchar (50),
-  `Tipo_Pago` varcha (50)
+  `Tipo_Pago` varchar (50)
 );
 
 CREATE TABLE `Pedido` (
@@ -52,6 +52,6 @@ CREATE TABLE `Tipo_Pago` (
   `Efectivo` int,
   `Débito` int,
   `Crédito` int,
-  `Gift Card` Tipo,
+  `Gift Card` int,
   FOREIGN KEY (`Efectivo`) REFERENCES `Cliente`(`Tipo_Pago`)
 );
