@@ -53,14 +53,20 @@ class Conectar():
                 select * from Productos;
                 UPDATE Productos set Precio = 500 WHERE id_producto = 1;
 
+             except mysql.connector.Error as descripciónError:
+            print("Error al actualizar producto:",descripciónError)      
+
     def EliminarProductos(self):
         if self.conexion.is_connected():
             try:
                 DELETE from Productos WHERE Nombre LIKE 'Harina%';
                 select * from Productos WHERE Nombre LIKE 'Harina%';
 
-            except mysql.connector.Error as descripcionError:
-                print("¡No se conectó!",descripcionError)
+            except mysql.connector.Error as descripciónError:
+            print("Error al eliminar el producto:",descripciónError)      
+
+    except mysql.connector.Error as descripcionError:
+        print("¡No se conectó!",descripcionError)
 
 class Productos():
     ID_Producto = 0,
