@@ -10,6 +10,15 @@ CREATE TABLE Productos (
   primary key (Id_producto)
 );
 
+CREATE TABLE Ingredientes(
+  id_ingrediente int auto_increment not null,
+  Nombre varchar (100),
+  Descripción varchar (200),
+  Contiene_alérgeno varchar (30),
+  Cantidad varchar (100),
+  primary key (id_ingrediente)
+);
+
 CREATE TABLE Recetas (
   Id_receta int auto_increment not null,
   fk_producto int,
@@ -29,6 +38,16 @@ CREATE TABLE Cliente (
   primary key (Id_cliente)
 );
 
+CREATE TABLE Tipo_Pago (
+  id_Tipopago int auto_increment not null,
+  Efectivo int,
+  Débito int,
+  Crédito int,
+  Gift_Card varchar(10),
+  primary key (id_Tipopago)
+);
+
+
 CREATE TABLE Pedidos (
   Id_pedido int auto_increment not null, 
   fk_producto int,
@@ -42,20 +61,5 @@ CREATE TABLE Pedidos (
   FOREIGN KEY (fk_tipo_pago) REFERENCES Tipo_Pago(id_Tipopago)
 );
 
-CREATE TABLE Ingredientes(
-  id_ingrediente int auto_increment not null,
-  Nombre varchar (100),
-  Descripción varchar (200),
-  Contiene_alérgeno varchar (30),
-  Cantidad varchar (100),
-  primary key (id_ingrediente)
-);
 
-CREATE TABLE Tipo_Pago (
-  id_Tipopago int auto_increment not null,
-  Efectivo int,
-  Débito int,
-  Crédito int,
-  Gift_Card varchar(10),
-  primary key (id_Tipopago)
-);
+
